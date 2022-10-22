@@ -1,0 +1,26 @@
+.title {
+  margin: 0;
+
+  &--big {
+    font-size: 80px;
+    line-height: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: $color-alice-blue;
+  }
+
+  &--medium {
+    font-size: 36px;
+    line-height: 120%;
+    font-weight: 400;
+    color: $color-black-pearl;
+  }
+
+  &--small {
+    font-size: 24px;
+    line-height: 140px;
+    font-weight: 400;
+    color: $color-deep-sky-blue;
+  }
+}

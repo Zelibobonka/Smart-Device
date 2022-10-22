@@ -1,0 +1,25 @@
+.promo {
+  position: relative;
+  z-index: -1;
+  min-height: 880px;
+  margin-top: -120px;
+  background-image: url("../img/background/desktop/background-intro-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo__wrapper {
+  margin: 0 auto;
+  padding: 305px 40px 40px 125px;
+  max-width: 1300px;
+}
+
+.promo__title {
+  margin-bottom: 40px;
+}
+
+.promo__description {
+  max-width: 685px;
+  margin: 0;
+  margin-bottom: 40px;
+}

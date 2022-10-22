@@ -1,0 +1,11 @@
+.main-header {
+  background: linear-gradient(to bottom, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 30px 40px 35px;
+}

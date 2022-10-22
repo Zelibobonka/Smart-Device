@@ -1,0 +1,27 @@
+.logo {
+  min-width: 224px;
+}
+
+.logo__link {
+  display: flex;
+  margin-right: 20px;
+}
+
+.logo__text {
+  padding: 5px 0 0 15px;
+}
+
+.logo__text-title {
+  font-size: 25px;
+  line-height: 100%;
+  font-weight: 700;
+  color: $color-alice-blue;
+}
+
+.logo__text-description {
+  font-family: $ff-roboto-medium;
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 500;
+  color: $color-alice-blue;
+}
