@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
-import del from 'del';
+import { deleteAsync as del } from 'del';
 import compileStyles from './gulp/compileStyles.mjs';
 import { copy, copyImages, copySvg } from './gulp/copyAssets.mjs';
 import js from './gulp/compileScripts.mjs';
