@@ -1,0 +1,15 @@
+.main-footer {
+  background-color: $color-black-pearl;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 50px 40px 45px;
+}
+
+.main-footer__logo-social-wrapper {
+  max-width: 230px;
+}

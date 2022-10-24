@@ -19,8 +19,26 @@
 
   &--small {
     font-size: 24px;
-    line-height: 140px;
+    line-height: 140%;
     font-weight: 400;
     color: $color-deep-sky-blue;
+  }
+
+  &--footer {
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $color-default-white;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  &--footer-item {
+    font-family: $ff-mono;
+    font-size: 16px;
+    line-height: 135%;
+    font-weight: 400;
+    color: $color-default-white;
+    opacity: 70%;
   }
 }

@@ -1,0 +1,19 @@
+.footer-nav__title {
+  margin-bottom: 20px;
+}
+
+.footer-nav__list {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-auto-flow: column;
+  column-gap: 30px;
+  max-height: 140px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-nav__item {
+  max-width: 220px;
+  margin-bottom: 10px;
+}

@@ -4,7 +4,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: $color-deep-sky-blue;
-  background-color: $color-default-white;
+  background-color: $color-alice-blue;
   border: none;
   border-radius: 3px;
   outline: 1px solid $color-deep-sky-blue;
@@ -12,9 +12,9 @@
 
   &--black-pearl {
     padding: 10px 15px;
-    color: $color-default-white;
+    color: $color-alice-blue;
     background-color: $color-black-pearl;
-    outline: 1px solid $color-default-white;
+    outline: 1px solid $color-alice-blue;
   }
 
   &--deep-sky-blue {
@@ -22,7 +22,7 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 100%;
-    color: $color-default-white;
+    color: $color-alice-blue;
     background-color: $color-deep-sky-blue;
     outline: none;
   }

@@ -1,0 +1,30 @@
+.feedback {
+  position: relative;
+  background-color: $color-second-deep-sky-blue;
+
+  &::before {
+    position: absolute;
+    content: "";
+    border-top: 840px solid rgba(4, 24, 39, 0.5);
+    border-right: 960px solid $color-transparent;
+  }
+}
+
+.feedback__wrapper {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  padding: 170px 40px 40px;
+  max-width: 1300px;
+  height: 840px;
+  margin: 0 auto;
+}
+
+.feedback__image-holder {
+  z-index: 2;
+  max-width: 550px;
+  height: 100%;
+  padding-right: 40px;
+}
