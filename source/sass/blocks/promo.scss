@@ -1,23 +1,82 @@
 .promo {
   min-height: 880px;
-  margin-top: -120px;
   background-image: url("../img/background/desktop/background-intro-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: $vp-1023) {
+    position: relative;
+    min-width: 768px;
+    min-height: 640px;
+    margin-top: -100px;
+    background-image: url("../img/background/tablet/background-intro-tablet.jpg");
+  }
+
+  @media (max-width: $vp-767) {
+    min-width: 320px;
+    min-height: 560px;
+    margin-top: -65px;
+    background-image: url("../img/background/mobile/background-intro-mobile.jpg");
+  }
 }
 
 .promo__wrapper {
   margin: 0 auto;
-  padding: 305px 40px 40px 125px;
+  padding: 310px 40px 40px 165px;
   max-width: 1300px;
+
+  @media (max-width: $vp-1023) {
+    padding: 185px 49px 49px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 148px 25px 25px;
+  }
 }
 
 .promo__title {
   margin-bottom: 40px;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 7px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 8px;
+  }
 }
 
 .promo__description {
   max-width: 685px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 57px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 45px;
+  }
+}
+
+.promo__button {
+  @media (max-width: $vp-1023) {
+    margin-left: 46px;
+  }
+
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
+.promo__button-mobile {
+  display: none;
+
+  @media (max-width: $vp-767) {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
 }

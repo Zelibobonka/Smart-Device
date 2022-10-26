@@ -1,6 +1,16 @@
 .contacts {
   max-width: 375px;
   padding: 0 30px;
+
+  @media (max-width: $vp-1023) {
+    padding: 0 0 0 54px;
+  }
+
+  @media (max-width: $vp-767) {
+    max-width: 100%;
+    padding: 20px 25px 14px;
+    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+  }
 }
 
 .contacts__list {
@@ -14,5 +24,5 @@
 }
 
 .contacts__item {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }

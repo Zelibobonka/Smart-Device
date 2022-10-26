@@ -2,9 +2,9 @@
   display: block;
   font-family: $ff-roboto-condensed;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   color: $color-deep-sky-blue;
-  background-color: $color-alice-blue;
+  background-color: $color-default-white;
   border: none;
   border-radius: 3px;
   outline: 1px solid $color-deep-sky-blue;
@@ -15,15 +15,41 @@
     color: $color-alice-blue;
     background-color: $color-black-pearl;
     outline: 1px solid $color-alice-blue;
+    letter-spacing: 0.05em;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-deep-sky-blue;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 
   &--deep-sky-blue {
     padding: 15px 25px;
     font-size: 18px;
     font-weight: 700;
-    line-height: 100%;
+    line-height: 135%;
     color: $color-alice-blue;
     background-color: $color-deep-sky-blue;
     outline: none;
+    letter-spacing: 0.05em;
+
+    &:hover {
+      background-color: #1e74d6;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-default-white;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 }

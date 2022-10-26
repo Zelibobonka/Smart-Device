@@ -8,6 +8,15 @@
     text-transform: uppercase;
     letter-spacing: 0.07em;
     color: $color-alice-blue;
+
+    @media (max-width: $vp-1023) {
+      font-size: 64px;
+    }
+
+    @media (max-width: $vp-767) {
+      font-size: 36px;
+      line-height: 120%;
+    }
   }
 
   &--medium {
@@ -15,6 +24,11 @@
     line-height: 120%;
     font-weight: 400;
     color: $color-black-pearl;
+
+    @media (max-width: $vp-767) {
+      font-size: 28px;
+      line-height: 140%;
+    }
   }
 
   &--small {
@@ -22,15 +36,44 @@
     line-height: 140%;
     font-weight: 400;
     color: $color-deep-sky-blue;
+
+    @media (max-width: $vp-767) {
+      font-size: 20px;
+    }
   }
 
   &--footer {
+    position: relative;
     font-size: 15px;
     line-height: 16px;
     font-weight: 400;
     color: $color-default-white;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+
+    &::after {
+      @media (max-width: $vp-767) {
+        position: absolute;
+        right: 0;
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-image: url("../img/svg/plus.svg");
+      }
+    }
+
+    &::before {
+      @media (max-width: $vp-767) {
+        position: absolute;
+        top: 6px;
+        right: 0;
+        content: "";
+        display: none;
+        width: 15px;
+        height: 1px;
+        background-image: url("../img/svg/minus.svg");
+      }
+    }
   }
 
   &--footer-item {
@@ -40,5 +83,22 @@
     font-weight: 400;
     color: $color-default-white;
     opacity: 70%;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-default-white;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    @media (max-width: $vp-767) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 }
