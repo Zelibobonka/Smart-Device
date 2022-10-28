@@ -50,30 +50,6 @@
     color: $color-default-white;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-
-    &::after {
-      @media (max-width: $vp-767) {
-        position: absolute;
-        right: 0;
-        content: "";
-        width: 15px;
-        height: 15px;
-        background-image: url("../img/svg/plus.svg");
-      }
-    }
-
-    &::before {
-      @media (max-width: $vp-767) {
-        position: absolute;
-        top: 6px;
-        right: 0;
-        content: "";
-        display: none;
-        width: 15px;
-        height: 1px;
-        background-image: url("../img/svg/minus.svg");
-      }
-    }
   }
 
   &--footer-item {

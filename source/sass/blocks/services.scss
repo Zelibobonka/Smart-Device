@@ -13,7 +13,7 @@
 .services__wrapper {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 62px 40px 140px;
+  padding: 65px 40px 140px;
 
   @media (max-width: $vp-1023) {
     padding: 60px 49px 75px;
@@ -75,6 +75,7 @@
   padding: 50px 40px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #53c6e0;
 
   @media (max-width: $vp-1023) {
     min-height: 250px;
@@ -88,36 +89,72 @@
   &--first {
     background-image: url("../img/promo-services/desktop/service-desktop-1.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-services/desktop/service-desktop-1@2x.jpg");
+    }
+
     @media (max-width: $vp-1023) {
       background-image: url("../img/promo-services/tablet/service-tablet-1.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-services/tablet/service-tablet-1@2x.jpg");
+      }
     }
 
     @media (max-width: $vp-767) {
       background-image: url("../img/promo-services/mobile/service-mobile-1.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-services/mobile/service-mobile-1@2x.jpg");
+      }
     }
   }
 
   &--second {
     background-image: url("../img/promo-services/desktop/service-desktop-2.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-services/desktop/service-desktop-2@2x.jpg");
+    }
+
     @media (max-width: $vp-1023) {
       background-image: url("../img/promo-services/tablet/service-tablet-2.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-services/tablet/service-tablet-2@2x.jpg");
+      }
     }
 
     @media (max-width: $vp-767) {
       background-image: url("../img/promo-services/mobile/service-mobile-2.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-services/mobile/service-mobile-2@2x.jpg");
+      }
     }
   }
 
   &--third {
     background-image: url("../img/promo-services/desktop/service-desktop-3.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-services/desktop/service-desktop-3@2x.jpg");
+    }
+
     @media (max-width: $vp-1023) {
       background-image: url("../img/promo-services/tablet/service-tablet-3.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-services/tablet/service-tablet-3@2x.jpg");
+      }
     }
 
     @media (max-width: $vp-767) {
       background-image: url("../img/promo-services/mobile/service-mobile-3.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-services/mobile/service-mobile-3@2x.jpg");
+      }
     }
   }
 
@@ -161,6 +198,8 @@
   position: absolute;
   right: 0;
   bottom: 0;
+  display: flex;
+  align-items: center;
   width: 60px;
   height: 60px;
 

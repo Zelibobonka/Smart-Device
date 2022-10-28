@@ -2,11 +2,17 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Smart Device">
   <title>Smart Device</title>
+  <link rel="preload" href="/css/style.min.css" as="style">
+  <link rel="preload" href="/js/main.min.js" as="script">
+  <link rel="preload" href="/fonts/pt-mono-regular.woff2" as="font">
+  <link rel="preload" href="/fonts/roboto-condensed-bold.woff2" as="font">
+  <link rel="preload" href="/fonts/roboto-condensed-regular.woff2" as="font">
+  <link rel="preload" href="/fonts/roboto-medium.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -47,8 +53,8 @@
       </nav>
 
       <div class="main-nav__button-wrapper">
-        <button class="main-nav__button btn btn--black-pearl" type="button" data-open-modal="feedback"
-          tabindex="0">Заказать звонок</button>
+        <button class="main-nav__button btn btn--black-pearl" type="button" data-open-modal="feedback">Заказать
+          звонок</button>
       </div>
     </div>
   </header>
@@ -58,8 +64,8 @@
       <div class="promo__wrapper">
         <h1 class="promo__title title title--big">Печатные платы</h1>
         <p class="promo__description description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <button class="promo__button btn btn--deep-sky-blue" type="button">Получить бесплатную консультацию</button>
-        <button class="promo__button-mobile btn btn--deep-sky-blue" type="button">бесплатная консультация</button>
+        <button class="promo__button btn btn--deep-sky-blue">Получить бесплатную консультацию</button>
+        <button class="promo__button-mobile btn btn--deep-sky-blue">бесплатная консультация</button>
       </div>
     </section>
 
@@ -109,11 +115,11 @@
     <section class="about">
       <div class="about__wrapper">
         <picture>
-          <source type="image/webp" srcset="img/decoration/year.webp 1x, img/decoration/year@2x.webp 2x" />
+          <source type="image/webp" srcset="img/decoration/year.webp 1x, img/decoration/year@2x.webp 2x"/>
           <img class="about__image" src="img/decoration/year.png" srcset="img/decoration/year@2x.png 2x"
             alt="2022 год.">
         </picture>
-        <div class=" ">
+        <div class="about__text-wrapper">
           <h2 class="about__title title title--medium">О компании</h2>
           <p class="about__description description description--small">Мы поставляем электронные комплектующие,
             производим
@@ -128,6 +134,14 @@
             и комплектующие Service Devices
             применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома,
             СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+          <p class="about__description about__description--hidden description description--small hidden">Smart Device -
+            это команда профессионалов. Через
+            нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент
+            насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
+          <p class="about__description about__description--hidden description description--small hidden">Мы стремимся к
+            постоянному развитию и повышению
+            уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает
+            экономить деньги и время наших клиентов</p>
           <div class="about__button-holder">
             <button class="about__button btn" type="button">Подробнее</button>
           </div>
@@ -143,29 +157,29 @@
           <li class="services__item">
             <a class="services__link services__link--first" href="#">
               <h3 class="services__link-title">Производство печатных плат</h3>
-              <button class="services__link-button btn btn--deep-sky-blue" type="button">
+              <div class="services__link-button btn btn--deep-sky-blue">
                 <span class="visually-hidden">Подробнее.</span>
                 <span class="services__link-button-arrow"></span>
-              </button>
+              </div>
             </a>
+          </li>
           <li class="services__item">
             <a class="services__link services__link--second" href="#">
               <h3 class="services__link-title"> Монтаж печатных плат</h3>
-              <button class="services__link-button btn btn--deep-sky-blue" type="button">
+              <div class="services__link-button btn btn--deep-sky-blue">
                 <span class="visually-hidden">Подробнее.</span>
                 <span class="services__link-button-arrow"></span>
-              </button>
+              </div>
             </a>
           </li>
           <li class="services__item">
             <a class="services__link services__link--third" href="#">
               <h3 class="services__link-title">Комплектующие для светотехники</h3>
-              <button class="services__link-button btn btn--deep-sky-blue" type="button">
+              <div class="services__link-button btn btn--deep-sky-blue">
                 <span class="visually-hidden">Подробнее.</span>
                 <span class="services__link-button-arrow"></span>
-              </button>
+              </div>
             </a>
-          </li>
           </li>
         </ul>
       </div>
@@ -174,7 +188,11 @@
     <section class="feedback">
       <div class="feedback__wrapper">
         <div class="feedback__image-holder">
-          <img class="feedback__image" src="img/decoration/airplane.png" alt="Бумажный самолетик.">
+          <picture class="about__image">
+            <source type="image/webp" srcset="img/decoration/airplane.webp 1x, img/decoration/airplane@2x.webp 2x"/>
+            <img class="about__image" src="img/decoration/airplane.png" srcset="img/decoration/airplane@2x.png 2x"
+              alt="2022 год.">
+          </picture>
         </div>
         <form class="program" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="program__title title title--medium">Остались вопросы? Задайте их нам!</h2>
@@ -183,7 +201,7 @@
             <legend class="visually-hidden">Ваши данные.</legend>
             <div class="program__input-wrapper">
               <input class="program__control" type="text" name="name" placeholder="Имя" required>
-              <input class="program__control" type="number" name="phone" placeholder="Телефон" required>
+              <input class="program__control" type="tel" name="phone" placeholder="Телефон" required>
               <textarea class="program__control program__control--textarea" name="comment"
                 placeholder="Ваш вопрос"></textarea>
             </div>
@@ -248,7 +266,11 @@
 
       <div class="main-footer__text-wrapper">
         <div class="footer-nav">
-          <h3 class="footer-nav__title title title--footer">Разделы сайта</h3>
+          <div class="footer-nav__title-holder">
+            <h3 class="footer-nav__title title title--footer">Разделы сайта</h3>
+            <button class="footer-nav__button-open" type="button" aria-label="Открыть меню."></button>
+            <button class="footer-nav__button-close" type="button" aria-label="Закрыть меню."></button>
+          </div>
           <ul class="footer-nav__list">
             <li class="footer-nav__item">
               <a class="footer-nav__link title title--footer-item" href="#">О Компании</a>
@@ -275,7 +297,11 @@
         </div>
 
         <div class="contacts">
-          <h3 class="contacts__title title title--footer">Наш офис</h3>
+          <div class="contacts__title-holder">
+            <h3 class="contacts__title title title--footer">Наш офис</h3>
+            <button class="contacts__button-open" type="button" aria-label="Открыть меню."></button>
+            <button class="contacts__button-close" type="button" aria-label="Закрыть меню."></button>
+          </div>
           <ul class="contacts__list">
             <li class="contacts__item">
               <a class="contacts__link title title--footer-item" href="#">г. Мытищи, Олимпийский проспект, д.10</a>
@@ -300,15 +326,16 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <form class="modal__program program" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="modal__program program" action="https://echo.htmlacademy.ru/" method="post" name="form">
           <h2 class="modal__title program__title title title--medium">Закажите звонок</h2>
           <p class="modal__description program__description description description--small">Оставьте контакты, мы
             проконсультируем вас бесплатно в удобное время</p>
           <fieldset class="program__fieldset">
             <legend class="visually-hidden">Ваши данные.</legend>
             <div class="modal__input-wrapper program__input-wrapper">
-              <input class="modal__control program__control" type="text" name="name" placeholder="Имя" required>
-              <input class="modal__control program__control" type="number" name="phone" placeholder="Телефон" required>
+              <input class="modal__control modal__control--focus program__control" type="text" name="name"
+                placeholder="Имя" required>
+              <input class="modal__control program__control" type="tel" name="phone" placeholder="Телефон" required>
               <textarea class="modal__control program__control program__control--textarea" name="comment"
                 placeholder="Ваш вопрос"></textarea>
             </div>
@@ -333,7 +360,6 @@
     </div>
   </div>
 
-  <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

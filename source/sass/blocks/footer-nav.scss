@@ -5,8 +5,37 @@
   }
 }
 
-.footer-nav__title {
+.footer-nav__title-holder {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.footer-nav__button-open {
+  display: none;
+
+  @media (max-width: $vp-767) {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: $color-transparent;
+    background-image: url("../img/svg/plus.svg");
+    border: none;
+  }
+}
+
+.footer-nav__button-close {
+  display: none;
+
+  @media (max-width: $vp-767) {
+    width: 15px;
+    height: 15px;
+    background-color: $color-transparent;
+    background-image: url("../img/svg/minus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+  }
 }
 
 .footer-nav__list {
