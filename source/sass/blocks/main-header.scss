@@ -4,30 +4,28 @@
   left: 0;
   right: 0;
   z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px calc(var(--side-offset) + 60px) 35px var(--side-offset);
   background: linear-gradient(to bottom, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
   @media (max-width: $vp-1023) {
     position: relative;
     min-width: 768px;
+    padding: 20px 71px 25px 50px;
   }
 
   @media (max-width: $vp-767) {
     min-width: 320px;
+    padding: 10px 37px 10px 25px;
   }
 }
 
-.main-header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1300px;
-  padding: 30px 100px 35px 40px;
+.main-header__button {
+  letter-spacing: 0.1em;
+  margin: 5px 0 10px 20px;
 
   @media (max-width: $vp-1023) {
-    padding: 20px 71px 25px 49px;
-  }
-
-  @media (max-width: $vp-767) {
-    padding: 10px 37px 10px 25px;
+    display: none;
   }
 }

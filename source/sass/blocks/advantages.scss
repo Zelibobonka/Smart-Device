@@ -1,24 +1,16 @@
 .advantages {
+  padding: 121px var(--side-offset) 60px;
+
   @media (max-width: $vp-1023) {
     min-width: 768px;
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 
   @media (max-width: $vp-767) {
     min-width: 320px;
-  }
-}
-
-.advantages__wrapper {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 121px 40px 60px;
-
-  @media (max-width: $vp-1023) {
-    padding: 80px 49px 40px;
-  }
-
-  @media (max-width: $vp-767) {
-    padding: 50px 25px 25px;
+    padding-top: 50px;
+    padding-bottom: 25px;
   }
 }
 
@@ -43,7 +35,7 @@
 
   @media (max-width: $vp-1023) {
     min-height: 360px;
-    padding: 40px 45px 32px;
+    padding: 40px 44px 32px 45px;
   }
 
   @media (max-width: $vp-767) {

@@ -1,26 +1,17 @@
 .services {
+  padding: 65px var(--side-offset) 140px;
   background-color: $color-black-pearl;
 
   @media (max-width: $vp-1023) {
     min-width: 768px;
+    padding-top: 60px;
+    padding-bottom: 75px;
   }
 
   @media (max-width: $vp-767) {
     min-width: 320px;
-  }
-}
-
-.services__wrapper {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 65px 40px 140px;
-
-  @media (max-width: $vp-1023) {
-    padding: 60px 49px 75px;
-  }
-
-  @media (max-width: $vp-767) {
-    padding: 48px 25px 86px;
+    padding-top: 48px;
+    padding-bottom: 86px;
   }
 }
 

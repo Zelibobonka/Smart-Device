@@ -1,15 +1,16 @@
 const button = document.querySelector('.promo__button');
 const buttonMobile = document.querySelector('.promo__button-mobile');
 
-const form = document.querySelector('.feedback__wrapper');
+const form = document.querySelector('.feedback');
 
-const scrolling = () => {
+const scroll = () => {
   function handleButtonClick() {
-    form.scrollIntoView({block: "center", behavior: "smooth"});
+    form.scrollIntoView({block: 'center', behavior: 'smooth'});
   }
+  if (button !== null || buttonMobile !== null) {
+    button.addEventListener('click', handleButtonClick);
+    buttonMobile.addEventListener('click', handleButtonClick);
+  }
+};
 
-  button.addEventListener('click', handleButtonClick);
-  buttonMobile.addEventListener('click', handleButtonClick);
-}
-
-export {scrolling};
+export {scroll};

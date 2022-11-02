@@ -1,58 +1,54 @@
-const mainFooterTextWrapper = document.querySelector('.main-footer__text-wrapper');
-const footerNavTitleHolder = mainFooterTextWrapper.querySelector('.footer-nav__title-holder');
-const contactsTitleHolder = mainFooterTextWrapper.querySelector('.contacts__title-holder');
-const footerNavButtonOpen = mainFooterTextWrapper.querySelector('.footer-nav__button-open');
-const footerNavButtonClose = mainFooterTextWrapper.querySelector('.footer-nav__button-close');
-const contactsButtonOpen = mainFooterTextWrapper.querySelector('.contacts__button-open');
-const contactsButtonClose = mainFooterTextWrapper.querySelector('.contacts__button-close');
-const footerNavList = mainFooterTextWrapper.querySelector('.footer-nav__list');
-const contactsList = mainFooterTextWrapper.querySelector('.contacts__list');
-
-
-
 const realizationAccordion = () => {
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    footerNavList.style.display = 'none';
-    contactsList.style.display = 'none';
-    footerNavTitleHolder.style.marginBottom = "0";
-    contactsTitleHolder.style.marginBottom = "0";
+  const accordions = document.querySelectorAll('.accordion');
+  const mobileQuery = '(max-width: 767px)';
+  const mobileMedia = window.matchMedia(mobileQuery);
+  let openedAccordionOnMobile = false;
 
-    footerNavButtonOpen.addEventListener('click', () => {
-      footerNavList.style.display = 'block';
-      footerNavTitleHolder.style.marginBottom = "20px";
-      contactsList.style.display = 'none';
-      contactsButtonOpen.style.display = 'block';
-      contactsButtonClose.style.display = 'none';
-      contactsTitleHolder.style.marginBottom = "0";
-      footerNavButtonClose.style.display = 'block';
-      footerNavButtonOpen.style.display = 'none';
-    });
+  const triggerClosePrevHandlers = Array.from(
+    { length: accordions.length },
+    (_, index) => closePreviousAccordion(index)
+  );
 
-    footerNavButtonClose.addEventListener('click', () => {
-      footerNavList.style.display = 'none';
-      footerNavTitleHolder.style.marginBottom = "0";
-      footerNavButtonClose.style.display = 'none';
-      footerNavButtonOpen.style.display = 'block';
-    });
+  updateMatches();
+  mobileMedia.addEventListener('change', updateMatches);
 
-    contactsButtonOpen.addEventListener('click', () => {
-      contactsList.style.display = 'block';
-      contactsTitleHolder.style.marginBottom = "20px";
-      footerNavList.style.display = 'none';
-      footerNavButtonOpen.style.display = 'block';
-      footerNavButtonClose.style.display = 'none';
-      footerNavTitleHolder.style.marginBottom = "0";
-      contactsButtonClose.style.display = 'block';
-      contactsButtonOpen.style.display = 'none';
-    });
+  function updateMatches() {
+    if (mobileMedia.matches) {
+      accordions.forEach((accordion, index) => {
+        accordion.open = false;
 
-    contactsButtonClose.addEventListener('click', () => {
-      contactsList.style.display = 'none';
-      contactsTitleHolder.style.marginBottom = "0";
-      contactsButtonClose.style.display = 'none';
-      contactsButtonOpen.style.display = 'block';
-    });
+        const summary = accordion.firstElementChild;
+        summary.removeEventListener('click', cancelEvent);
+        summary.addEventListener('click', triggerClosePrevHandlers[index]);
+      });
+    } else {
+      openedAccordionOnMobile = false;
+      accordions.forEach((accordion, index) => {
+
+        accordion.open = true;
+
+        const summary = accordion.firstElementChild;
+        summary.removeEventListener('click', triggerClosePrevHandlers[index]);
+        summary.addEventListener('click', cancelEvent);
+      });
+    }
   }
-}
+
+  function cancelEvent(evt) {
+    evt.preventDefault();
+  }
+
+  function closePreviousAccordion(index) {
+    return () => {
+      if (
+        openedAccordionOnMobile !== false &&
+        openedAccordionOnMobile !== index
+      ) {
+        accordions[openedAccordionOnMobile].open = false;
+      }
+      openedAccordionOnMobile = index;
+    };
+  }
+};
 
 export {realizationAccordion};
