@@ -147,13 +147,16 @@
   }
 
   @media (max-width: $vp-767) {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
 .program__button {
-  font-size: 16px;
+  grid-column: 1 / 2;
+  grid-row: 1 /2;
   padding: 15px 25px 10px;
+  font-size: 16px;
   font-weight: 700;
   background-color: $color-second-black-pearl;
   outline: none;
@@ -176,6 +179,8 @@
   position: relative;
   display: flex;
   align-items: flex-end;
+  grid-column: 2 / 3;
+  grid-row: 1 /2;
 
   &:hover {
     .program__text {

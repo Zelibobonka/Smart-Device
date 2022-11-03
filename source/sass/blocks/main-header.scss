@@ -5,6 +5,7 @@
   right: 0;
   z-index: 3;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 30px calc(var(--side-offset) + 60px) 35px var(--side-offset);
   background: linear-gradient(to bottom, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -21,10 +22,12 @@
 }
 
 .main-header__button {
-  letter-spacing: 0.1em;
-  margin: 5px 0 10px 20px;
-
   @media (max-width: $vp-1023) {
     display: none;
   }
+}
+
+.main-header__button button {
+  letter-spacing: 0.1em;
+  margin: 5px 0 10px 20px;
 }
