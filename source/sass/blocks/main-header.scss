@@ -8,15 +8,14 @@
   justify-content: space-between;
   padding: 30px calc(var(--side-offset) + 60px) 35px var(--side-offset);
   background: linear-gradient(to bottom, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  scrollbar-gutter: auto;
 
   @media (max-width: $vp-1023) {
     position: relative;
-    min-width: 768px;
     padding: 20px 71px 25px 50px;
   }
 
   @media (max-width: $vp-767) {
-    min-width: 320px;
     padding: 10px 37px 10px 25px;
   }
 }

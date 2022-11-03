@@ -3,13 +3,11 @@
   background-color: $color-black-pearl;
 
   @media (max-width: $vp-1023) {
-    min-width: 768px;
     padding-top: 60px;
     padding-bottom: 75px;
   }
 
   @media (max-width: $vp-767) {
-    min-width: 320px;
     padding-top: 48px;
     padding-bottom: 86px;
   }
@@ -80,8 +78,10 @@
   &--first {
     background-image: url("../img/promo-services/desktop/service-desktop-1.jpg");
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-services/desktop/service-desktop-1@2x.jpg");
+    @media (min-width: $vp-1024) {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-services/desktop/service-desktop-1@2x.jpg");
+      }
     }
 
     @media (max-width: $vp-1023) {
@@ -104,8 +104,10 @@
   &--second {
     background-image: url("../img/promo-services/desktop/service-desktop-2.jpg");
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-services/desktop/service-desktop-2@2x.jpg");
+    @media (min-width: $vp-1024) {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-services/desktop/service-desktop-2@2x.jpg");
+      }
     }
 
     @media (max-width: $vp-1023) {
@@ -128,8 +130,10 @@
   &--third {
     background-image: url("../img/promo-services/desktop/service-desktop-3.jpg");
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-services/desktop/service-desktop-3@2x.jpg");
+    @media (min-width: $vp-1024) {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-services/desktop/service-desktop-3@2x.jpg");
+      }
     }
 
     @media (max-width: $vp-1023) {

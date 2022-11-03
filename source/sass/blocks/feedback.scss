@@ -9,14 +9,12 @@
 
   @media (max-width: $vp-1023) {
     display: block;
-    min-width: 768px;
     min-height: 100%;
     padding-top: 50px;
     padding-bottom: 125px;
   }
 
   @media (max-width: $vp-767) {
-    min-width: 320px;
     padding-bottom: 86px;
   }
 

@@ -4,13 +4,11 @@
   padding: 63px var(--side-offset) 100px;
 
   @media (max-width: $vp-1023) {
-    min-width: 768px;
     padding-top: 40px;
     padding-bottom: 80px;
   }
 
   @media (max-width: $vp-767) {
-    min-width: 320px;
     display: block;
     padding-top: 22px;
   }
