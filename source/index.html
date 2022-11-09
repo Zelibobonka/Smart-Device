@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Smart Device">
   <title>Smart Device</title>
-  <link rel="preload" href="/css/style.min.css" as="style">
-  <link rel="preload" href="/js/main.min.js" as="script">
-  <link rel="preload" href="/fonts/pt-mono-regular.woff2" as="font">
-  <link rel="preload" href="/fonts/roboto-condensed-bold.woff2" as="font">
-  <link rel="preload" href="/fonts/roboto-condensed-regular.woff2" as="font">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="../css/style.min.css" as="style">
+  <link rel="preload" href="js/main.min.js" as="script">
+  <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font">
+  <link rel="stylesheet" href="../css/style.min.css">
 </head>
 
 <body>
@@ -166,7 +166,8 @@
       <div class="feedback__image-holder">
         <picture>
           <source type="image/webp" srcset="img/decoration/airplane.webp 1x, img/decoration/airplane@2x.webp 2x" />
-          <img src="img/decoration/airplane.png" srcset="img/decoration/airplane@2x.png 2x" width="510" height="285" alt="" aria-hidden="true">
+          <img src="img/decoration/airplane.png" srcset="img/decoration/airplane@2x.png 2x" width="510" height="285"
+            alt="" aria-hidden="true">
         </picture>
       </div>
       <form id="form" class="program" action="https://echo.htmlacademy.ru/" method="post">
@@ -178,7 +179,7 @@
             <label class="visually-hidden" for="name">Ваше имя.</label>
             <input type="text" id="name" name="name" placeholder="Имя" required>
             <label class="visually-hidden" for="phone">Номер телефона.</label>
-            <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+            <input type="tel" id="phone" name="phone" placeholder="Телефон" minlength="16" maxlength="16" required>
             <label class="visually-hidden" for="comment">Поле для вашего комментария.</label>
             <textarea id="comment" name="comment" placeholder="Ваш вопрос"></textarea>
           </div>
@@ -237,7 +238,7 @@
 
     <div class="main-footer__text-wrapper">
       <details class="footer-nav accordion" open="open">
-        <summary class="footer-nav__title title title--footer accordion__trigger">Разделы сайта</summary>
+        <summary class="footer-nav__title title title--footer accordion__trigger" tabindex="-1">Разделы сайта</summary>
         <ul class="footer-nav__list">
           <li class="footer-nav__item">
             <a class="footer-nav__link title title--footer-item" href="#">О&nbsp;Компании</a>
@@ -264,7 +265,7 @@
       </details>
 
       <details class="contacts accordion" open="open">
-        <summary class="contacts__title title title--footer accordion__trigger">Наш офис</summary>
+        <summary class="contacts__title title title--footer accordion__trigger" tabindex="-1">Наш офис</summary>
         <ul class="contacts__list">
           <li class="contacts__item">
             <a class="contacts__link title title--footer-item" href="#">г. Мытищи, Олимпийский проспект, д.10</a>
@@ -291,21 +292,22 @@
         <form class="modal__program program" action="https://echo.htmlacademy.ru/" method="post" name="form">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
-          <fieldset class="program__fieldset">
+          <fieldset class="modal__fieldset program__fieldset">
             <legend class="visually-hidden">Ваши данные.</legend>
             <div class="modal__input-wrapper program__input-wrapper">
               <label class="visually-hidden" for="name-modal">Ваше имя.</label>
               <input type="text" id="name-modal" name="name" placeholder="Имя" autofocus required>
               <label class="visually-hidden" for="phone-modal">Номер телефона.</label>
-              <input type="tel" id="phone-modal" name="phone" placeholder="Телефон" required>
+              <input type="tel" id="phone-modal" name="phone" placeholder="Телефон" minlength="16" maxlength="16"
+                required>
               <label class="visually-hidden" for="comment-modal">Поле для вашего комментария.</label>
               <textarea name="comment" id="comment-modal" placeholder="Ваш вопрос"></textarea>
             </div>
             <div class="modal__holder program__holder">
               <label>
                 <input class="visually-hidden" type="checkbox" name="personal-data" required checked>
-                <span class="program__mark-checkbox"></span>
-                <span class="program__text description description--small">Я&nbsp;согласен на&nbsp;обработку
+                <span class="modal__mark-checkbox program__mark-checkbox"></span>
+                <span class="modal__text program__text description description--small">Я&nbsp;согласен на&nbsp;обработку
                   персональных данных</span>
               </label>
               <button class="modal__button program__button program__button btn btn--black-pearl"
@@ -314,7 +316,7 @@
           </fieldset>
         </form>
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
+          <svg width="20" height="20">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>
           </svg>
         </button>

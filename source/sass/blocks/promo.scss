@@ -9,7 +9,7 @@
   );
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #53c6e0;
+  background-color: $color-black-pearl;
 
   @media (max-width: $vp-1023) {
     position: relative;

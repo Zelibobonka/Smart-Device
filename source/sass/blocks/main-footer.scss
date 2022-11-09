@@ -1,6 +1,6 @@
 .main-footer {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  justify-content: space-between;
   padding: 50px var(--side-offset) 45px;
   background-color: $color-black-pearl;
 
@@ -35,9 +35,10 @@
 
 
 .main-footer__text-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content max-content;
   justify-content: space-between;
-  padding: 8px 0 0 3%;
+  padding: 8px 0 0 0;
 
   @media (max-width: $vp-1023) {
     min-width: 670px;

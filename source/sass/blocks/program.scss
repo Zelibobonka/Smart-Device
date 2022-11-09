@@ -181,6 +181,7 @@
   align-items: flex-end;
   grid-column: 2 / 3;
   grid-row: 1 /2;
+  cursor: pointer;
 
   &:hover {
     .program__text {

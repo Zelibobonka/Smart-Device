@@ -4,8 +4,8 @@
   left: 0;
   right: 0;
   z-index: 3;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
   justify-content: space-between;
   padding: 30px calc(var(--side-offset) + 60px) 35px var(--side-offset);
   background: linear-gradient(to bottom, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -13,6 +13,8 @@
 
   @media (max-width: $vp-1023) {
     position: relative;
+    display: flex;
+    justify-content: space-between;
     padding: 20px 71px 25px 50px;
   }
 
@@ -22,6 +24,8 @@
 }
 
 .main-header__button {
+  max-width: 200px;
+
   @media (max-width: $vp-1023) {
     display: none;
   }
